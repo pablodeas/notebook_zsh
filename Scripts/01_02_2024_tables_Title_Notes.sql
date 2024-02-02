@@ -17,3 +17,12 @@ create table Notes (
 
 --insert into Notes (TitleId, Nome)
 --values (1, 'Teste Nota');
+
+--select 
+--	a.Nome as Título, 
+--	b.Nome as Corpo
+--from Title a
+--join Notes b on a.Id = b.TitleId;
+
+--delete from Notes
+--where (select Id from Title where Nome = '$title_delete')

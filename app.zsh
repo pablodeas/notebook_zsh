@@ -130,7 +130,7 @@ func edit_note () {
 
 	# Verifique se o título da nota existe na tabela Title
 	exists=$(sqlite3 notes.db "
-	SELECT EXISTS(SELECT 1 FROM Title WHERE Nome = '$title_change');
+	select exists(select 1 from Title where Nome = '$title_change');
 	")
 
 	if [[ $exists == 0 ]]; then
@@ -178,7 +178,7 @@ func delete_note () {
 
 	# Verifique se o título da nota existe na tabela Title
 	exists=$(sqlite3 notes.db "
-	SELECT EXISTS(SELECT 1 FROM Title WHERE Nome = '$title_delete');
+	select exists(select 1 from Title where Nome = '$title_delete');
 	")
 
 	if [[ $exists == 0 ]]; then
@@ -246,7 +246,5 @@ func option_case () {
 }
 
 # Executions
-# menu
 menu
 option_case
-
